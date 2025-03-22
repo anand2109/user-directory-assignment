@@ -20,8 +20,7 @@ This is a **User Directory Application** built with **React, Redux, and Vite**. 
 ```
 /user-directory
 ├── /public
-│   ├── /fonts        # Font files if using locally
-│   └── /index.html   # Main HTML file
+
 ├── /src
 │   ├── /api
 │   │   └── api.js           # Fetch API logic
@@ -29,10 +28,11 @@ This is a **User Directory Application** built with **React, Redux, and Vite**. 
 │   │   └── store.js         # Redux store
 │   ├── /components
 │   │   ├── UserCard.jsx     # Displays user summary
-│   │   └── UserDetails.jsx  # Detailed user info
+│   │   └── Loader.jsx       # Loader
+│   │   └── ErrorState.jsx   # Error State component
+│   │   └── NoResult.jsx     # No Result component
 │   ├── /features
 │   │   └── /users
-│   │       ├── userAPI.js   # API logic for fetching users
 │   │       └── userSlice.js # Redux slice
 │   ├── /pages
 │   │   ├── Home.jsx         # Home page (list and search)
@@ -44,12 +44,14 @@ This is a **User Directory Application** built with **React, Redux, and Vite**. 
 │   ├── /tests
 │   │   ├── UserCard.test.jsx    # Unit test for UserCard
 │   │   └── setupTests.js    # Jest configuration
+│   ├── /utils
+│   │   └── constants.js         # API Constants
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
-├── /tests
-│   └── testUtils.js         # Utility to wrap MemoryRouter
 ├── .gitignore
+├── eslint.config.js
+├── index.html   # Main HTML file
 ├── package.json
 ├── vite.config.js
 └── README.md
@@ -62,16 +64,10 @@ This is a **User Directory Application** built with **React, Redux, and Vite**. 
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/user-directory.git
+git clone https://github.com/anand2109/user-directory-assignment.git
 ```
 
-### 2. **Navigate to the Project Directory**
-
-```bash
-cd user-directory
-```
-
-### 3. **Install Dependencies**
+### 2. **Install Dependencies**
 
 ```bash
 npm install

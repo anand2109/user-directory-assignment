@@ -5,6 +5,7 @@ import UserCard from "../components/UserCard";
 import "../styles/App.css";
 import Loader from "../components/Loader";
 import ErrorState from "../components/ErrorState";
+import Noresult from "../components/Noresult";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -65,7 +66,7 @@ const Home = () => {
         {currentUsers.length > 0 ? (
           currentUsers.map((user) => <UserCard key={user.id} user={user} />)
         ) : (
-          <p>No users found matching the search.</p>
+          <Noresult/>
         )}
       </div>
 
